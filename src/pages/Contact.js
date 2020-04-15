@@ -1,9 +1,12 @@
-import React from "react";
+import React, { useContext } from "react";
+import { MovieContext } from "../MovieContext";
 
 const Contact = () => {
+  const [movies, setMovies] = useContext(MovieContext);
   return (
     <div>
       <h2>ContactPage</h2>
+      <h3>List of Movies: {movies.length}</h3>
       <p>
         Lorem Ipsum is simply dummy text of the printing and typesetting
         industry. Lorem Ipsum has been the industry's standard dummy text ever

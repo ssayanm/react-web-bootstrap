@@ -7,24 +7,27 @@ import NoMatch from "./pages/NoMatch";
 import Layout from "./components/Layout";
 import NavigationBar from "./components/NavigationBar";
 import Jumbotron from "./components/Jumbotron";
+import { MovieProvider } from "./MovieContext";
 
 function App() {
   return (
-    <React.Fragment>
-      {" "}
-      <Router>
-        <NavigationBar />
-        <Jumbotron />
-        <Layout>
-          <Switch>
-            <Route exact path="/" component={Home} />
-            <Route exact path="/about" component={About} />
-            <Route exact path="/contact" component={Contact} />
-            <Route component={NoMatch} />
-          </Switch>
-        </Layout>{" "}
-      </Router>
-    </React.Fragment>
+    <MovieProvider>
+      <React.Fragment>
+        {" "}
+        <Router>
+          <NavigationBar />
+          <Jumbotron />
+          <Layout>
+            <Switch>
+              <Route exact path="/" component={Home} />
+              <Route exact path="/about" component={About} />
+              <Route exact path="/contact" component={Contact} />
+              <Route component={NoMatch} />
+            </Switch>{" "}
+          </Layout>{" "}
+        </Router>
+      </React.Fragment>
+    </MovieProvider>
   );
 }
 
