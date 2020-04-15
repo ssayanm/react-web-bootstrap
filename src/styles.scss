@@ -1,0 +1,48 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+}
+
+.navbar {
+  background-color: #222;
+}
+
+.navbar-brand {
+  color: green !important;
+}
+
+a,
+.navbar-nav,
+.nav-link {
+  color: red;
+
+  &:hover {
+    color: white;
+    text-decoration: none;
+  }
+}
+
+.jumbo {
+  background: url("./assets/boatImage.jpg") no-repeat fixed bottom;
+  background-size: cover;
+  color: #fff;
+  height: 200px;
+  position: relative;
+  z-index: -2;
+}
+
+.overlay {
+  background-color: #333;
+  opacity: 0.6;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: -1;
+}
