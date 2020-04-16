@@ -24,6 +24,11 @@ const NavigationBar = () => {
               <Link to="/contact">Contact</Link>
             </Nav.Link>
           </Nav.Item>
+          <Nav.Item>
+            <Nav.Link>
+              <Link to="/shop">Shop</Link>
+            </Nav.Link>
+          </Nav.Item>
         </Nav>
       </Navbar.Collapse>
     </Navbar>
